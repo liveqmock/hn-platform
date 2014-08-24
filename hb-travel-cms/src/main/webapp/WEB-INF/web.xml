@@ -102,7 +102,7 @@
 	<!-- SimpleCaptcha start -->
 	<servlet>
         <servlet-name>Captcha</servlet-name>
-        <servlet-class>wofs.common.portal.web.captcha.ImageCaptchaServlet</servlet-class>
+        <servlet-class>hn.travel.cms.web.captcha.ImageCaptchaServlet</servlet-class>
         <init-param>
             <param-name>size</param-name>
             <param-value>4</param-value>
