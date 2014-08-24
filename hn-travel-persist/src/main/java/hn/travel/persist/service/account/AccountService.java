@@ -19,6 +19,8 @@ import org.apache.shiro.SecurityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import org.springside.modules.security.utils.Digests;
@@ -51,6 +53,21 @@ public class AccountService {
 	
 	public List<User> getAllUser(User user) {
 		return userDao.findAll(AccSpecUtils.getUserSpec(user));
+	}
+	
+	/**
+	 * 分页获取用户列表
+	 * @param user
+	 * @param pageable
+	 * @return
+	 */
+	public Page<User> findAll(User user, Pageable pageable) {
+		return userDao.findAll(AccSpecUtils.getUserSpec(user), pageable);
+	}
+	
+	public long count(User user) {
+		return userDao.count(AccSpecUtils
+				.getUserSpec(user));
 	}
 
 	public User getUser(Long id) {
