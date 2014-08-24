@@ -31,7 +31,7 @@ public class User extends IdEntity {
 	private String roles;
 	private Date registerDate;
 	
-	private String test; 
+	private String test;
 	
 	private Date startTime;
 	
