@@ -24,6 +24,7 @@ public class ResourceUtils {
 		rs.add(new Resource(4L, "系统管理_用户管理", "/admin/user", 1, 1, 1L));
 		rs.add(new Resource(5L, "会员管理_会员列表", "/mem", 1, 1, 2L));
 		rs.add(new Resource(6L, "酒店管理_酒店列表", "/hotel", 1, 1, 3L));
+		rs.add(new Resource(7L, "会员管理_密码找回", "/mem/pwd", 1, 1, 2L));
 	}
 	
 	public static List<Resource> getByParentId(Long pid) {
